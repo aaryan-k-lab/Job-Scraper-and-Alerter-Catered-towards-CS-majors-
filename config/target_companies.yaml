@@ -1,0 +1,31 @@
+# Company names are matched case-insensitively, ignoring punctuation and
+# suffixes like Inc/LLC/Corp. List alternate names separately if needed.
+
+tier1:
+  - Google
+  - Anthropic
+  - Jane Street
+  - Citadel
+  - Citadel Securities
+  - OpenAI
+  - Meta
+  - Apple
+  - Microsoft
+  - Amazon
+  - Nvidia
+  - Two Sigma
+  - Hudson River Trading
+  - Jump Trading
+  - DE Shaw
+
+tier2:
+  - Stripe
+  - Databricks
+  - Palantir
+  - Netflix
+  - Airbnb
+  - Uber
+  - Coinbase
+  - Robinhood
+  - Ramp
+  - Figma

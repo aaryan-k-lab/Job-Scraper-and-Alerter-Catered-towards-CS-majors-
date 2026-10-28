@@ -1,0 +1,39 @@
+# Main settings. Edit freely; no code changes needed.
+
+mode: review              # review | auto
+tier1_always_review: true # Tier 1 companies use review mode even when mode is auto
+
+# Which listings to consider
+terms:
+  - Winter 2026
+  - Spring 2027
+us_only: true             # keep US locations and US/unspecified remote; drop everything else
+
+# Scoring (weights add up to 100)
+score_threshold: 40
+weights:
+  role: 45      # title matches a role keyword below
+  tier: 30      # Tier 1 = full points, Tier 2 = half
+  recency: 25   # full points if posted today, 0 after recency_days
+recency_days: 30
+
+# Title keywords per role bucket (case-insensitive, whole words)
+role_keywords:
+  swe: [software, swe, developer, backend, back-end, frontend, front-end, full stack, full-stack,
+        fullstack, mobile, ios, android, web, platform, infrastructure, devops, sre,
+        site reliability, cloud, programmer, application, applications]
+  ai_ml: [machine learning, ml, ai, artificial intelligence, deep learning, nlp, computer vision,
+          llm, genai, research engineer]
+  data: [data science, data scientist, data analyst, data analytics, data engineer,
+         data engineering, analytics, business intelligence, bi, statistics]
+  it: [it, information technology, help desk, technical support, network, networking,
+       cybersecurity, security, systems administrator, sysadmin]
+# Any of these in the title zeroes the role score
+negative_keywords: [mechanical, electrical, hardware, sales, marketing, accounting, recruiting,
+                    human resources, hr, legal, supply chain, manufacturing, civil, chemical,
+                    finance, product manager, product management, design intern]
+
+# Application limits (used from milestone 2 on)
+daily_cap: 10
+action_delay_seconds: [3, 10]
+pause_between_apps_seconds: [30, 90]
